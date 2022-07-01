@@ -15,12 +15,14 @@ let addNewPlayer = () => {
     //we made a variable called table to grab the table from the html, and some variables that insert rows and cells into that table
     let table = document.getElementById("playerTable");
     let row = table.insertRow(0);
-    let cell1 = row.insertCell(0);
-    let cell2 = row.insertCell(1);
-    let cell3 = row.insertCell(2);
-    cell1.innerHTML = "Player Name";
-    cell2.innerHTML = "0";
-    cell3.innerHTML = "<button>add Push Up</div>";
+    let player = row.insertCell(0);
+    let score = row.insertCell(1);
+    let increase = row.insertCell(2);
+    //the player's name will have to be an entry by the user  
+    player.innerHTML = "Player Name";
+    score.innerHTML = 0;
+    increase.innerHTML = "<button>Add Push Up</button>";
+    //wouldnt it be nice to have onclick the user can add whatever number they want instead of +1?  
   };
 };
 addNewPlayer();
