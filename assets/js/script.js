@@ -14,17 +14,49 @@ let addNewPlayer = () => {
     console.log("button was clicked");
     //we made a variable called table to grab the table from the html, and some variables that insert rows and cells into that table
     let table = document.getElementById("playerTable");
+    
+    //this is going to always insert at 0; if you want it to be the last it has to be -1
     let row = table.insertRow(0);
     let player = row.insertCell(0);
     let score = row.insertCell(1);
-    let increase = row.insertCell(2);
-    //the player's name will have to be an entry by the user  
+    let addPushUps = row.insertCell(2);
+    //the player's name will have to be an entry by the user
     player.innerHTML = "Player Name";
     score.innerHTML = 0;
-    increase.innerHTML = "<button>Add Push Up</button>";
-    //wouldnt it be nice to have onclick the user can add whatever number they want instead of +1?  
+    addPushUps.innerHTML = "<button>Add Push Up</button>";
+    //wouldnt it be nice to have onclick the user can add whatever number they want instead of +1?
   };
 };
 addNewPlayer();
 
 //I would like to add a button for each cell to increase or decrease the score; maybe I shoule make an object?!
+
+//so, we wanted to show that if you us .getelementbyclassname but there are no things by that class name, you'll get an empty array. We learned that return will give back the thing you ask for right after 'return', and we learned about the function inside the concole log - instead of console log just the name of the function, it gives me the function, but if i console log invoke the function, it will show me the result of the function in that console.log
+var fakeNews = () => {
+  return document.getElementsByClassName("test");
+};
+// same as above: If you don't use {}, the 1 line function will automatically return.
+// aka if you use {} and need an output/return value, you explicitly have to use the return keyword.
+var fakeNews = () => document.getElementsByClassName("test");
+
+// what happens if you change the function name from fakeNewz to fakeNews.
+// why does this happen? (hint: its about the let)
+console.log("this is fake newS with an S", fakeNews());
+// console.log('this is fake newZ with a ZZZ', fakeNewz())
+
+let a = 1;
+
+function waffles() {
+  let a = 2;
+  console.log(a);
+}
+let wafflez = () => {
+  let a = 3;
+  console.log(a);
+};
+
+console.log(a);
+waffles();
+wafflez();
+
+//
