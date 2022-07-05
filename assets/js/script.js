@@ -20,18 +20,16 @@ let addNewPlayer = () => {
       var x = document.createElement("INPUT");
       x.setAttribute("type", "text");
       x.setAttribute("value", "Hello World!");
-      player.appendChild(x);
+      console.log(x);
   
     let playerName = "mary";
-    player.innerHTML = "<button>" + playerName + "</button>" + x;
-
-    // playerName.onclick();
+      player.innerHTML = "<button>" + playerName + "</button>" + x;
 
     let score = row.insertCell(1);
-    score.innerHTML = 0 + " placeholder! ";
+      score.innerHTML = 0 + " placeholder! ";
 
     let addPushUps = row.insertCell(2);
-    addPushUps.innerHTML = addPushUpsButton;
+      addPushUps.innerHTML = addPushUpsButton;
 
     //the player's name will have to be an entry by the user
 
