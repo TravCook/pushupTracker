@@ -1,7 +1,7 @@
 let maryCount = 60;
 let addPushUpsButton = "<button>Add Push Ups</button>";
 
-let rows = document.getElementsByClassName("row");
+// let rows = document.getElementsByClassName("row");
 
 // I started just going with this and I figure I better plan instead of just like - going for it.
 //Instead of hard-coding rows and scores, I want to create objects that store name and score in local storage.
@@ -15,15 +15,17 @@ let addNewPlayer = () => {
     //this is going to always insert at 0; if you want it to be the last it has to be -1
     let row = table.insertRow(0);
 
-    let player = row.insertCell(0);
- 
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("value", "Hello World!");
-      console.log(x);
+    let player = row.insertCell(0);    
   
-    let playerName = "mary";
-      player.innerHTML = "<button>" + playerName + "</button>" + x;
+    let playerName = " new player "
+     player.innerHTML = "<button id='playerButton'" + "</button>" + playerName +  "<input id='input1' type='text' value='name'>" + "</input>";
+      console.log(table.children);
+      console.log(table.children[0].children[0].children[0].textContent);
+      
+    let nameEntry = document.getElementById('input1').value;
+    let playerEntry = document.getElementById('playerButton').textContent;
+    console.log(nameEntry);
+    console.log(playerEntry);
 
     let score = row.insertCell(1);
       score.innerHTML = 0 + " placeholder! ";
@@ -39,35 +41,41 @@ let addNewPlayer = () => {
 };
 addNewPlayer();
 
-// IGNORE THE BELOW!!!//
+
+
+
+
+
+
+// ---------------------------- IGNORE THE BELOW!!! ------------------------------------
 //I would like to add a button for each cell to increase or decrease the score; maybe I shoule make an object?!
 
 //so, we wanted to show that if you us .getelementbyclassname but there are no things by that class name, you'll get an empty array. We learned that return will give back the thing you ask for right after 'return', and we learned about the function inside the concole log - instead of console log just the name of the function, it gives me the function, but if i console log invoke the function, it will show me the result of the function in that console.log
-var fakeNews = () => {
-  return document.getElementsByClassName("test");
-};
-// same as above: If you don't use {}, the 1 line function will automatically return.
-// aka if you use {} and need an output/return value, you explicitly have to use the return keyword.
-var fakeNews = () => document.getElementsByClassName("test");
+// var fakeNews = () => {
+//   return document.getElementsByClassName("test");
+// };
+// // same as above: If you don't use {}, the 1 line function will automatically return.
+// // aka if you use {} and need an output/return value, you explicitly have to use the return keyword.
+// var fakeNews = () => document.getElementsByClassName("test");
 
-// what happens if you change the function name from fakeNewz to fakeNews.
-// why does this happen? (hint: its about the let)
-console.log("this is fake newS with an S", fakeNews());
-// console.log('this is fake newZ with a ZZZ', fakeNewz())
+// // what happens if you change the function name from fakeNewz to fakeNews.
+// // why does this happen? (hint: its about the let)
+// console.log("this is fake newS with an S", fakeNews());
+// // console.log('this is fake newZ with a ZZZ', fakeNewz())
 
-let a = 1;
+// let a = 1;
 
-function waffles() {
-  let a = 2;
-  console.log(a);
-}
-let wafflez = () => {
-  let a = 3;
-  console.log(a);
-};
+// function waffles() {
+//   let a = 2;
+//   console.log(a);
+// }
+// let wafflez = () => {
+//   let a = 3;
+//   console.log(a);
+// };
 
-console.log(a);
-waffles();
-wafflez();
+// console.log(a);
+// waffles();
+// wafflez();
 
 //
