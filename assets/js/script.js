@@ -1,7 +1,7 @@
 let maryCount = 60;
-let travisCount = 0;
-let jungCount = 0;
-let donnieCount = 0;
+let addPushUpsButton = "<button>Add Push Ups</button>";
+let playerName = " mary "
+
 
 let rows = document.getElementsByClassName("row");
 
@@ -11,24 +11,46 @@ let rows = document.getElementsByClassName("row");
 //a function to create a new column and row for each new player.
 let addNewPlayer = () => {
   document.getElementById("addPlayer").onclick = function () {
-    console.log("button was clicked");
+
+
     //we made a variable called table to grab the table from the html, and some variables that insert rows and cells into that table
     let table = document.getElementById("playerTable");
     
     //this is going to always insert at 0; if you want it to be the last it has to be -1
     let row = table.insertRow(0);
+
     let player = row.insertCell(0);
+    
+    player.innerHTML = "<button>" + playerName + "</button>";
+    console.log(player.innerHTML);
+    function myFunction() {
+      var x = document.createElement("INPUT");
+      x.setAttribute("type", "text");
+      x.setAttribute("value", "Hello World!");
+      document.body.appendChild(x);
+    }
+
+
     let score = row.insertCell(1);
+    score.innerHTML = 0 + " placeholder! ";
+
     let addPushUps = row.insertCell(2);
+    addPushUps.innerHTML = addPushUpsButton;
+
     //the player's name will have to be an entry by the user
-    player.innerHTML = "Player Name";
-    score.innerHTML = 0;
-    addPushUps.innerHTML = "<button>Add Push Up</button>";
+    
+    
+    // addPushUps.addClass();
     //wouldnt it be nice to have onclick the user can add whatever number they want instead of +1?
   };
 };
 addNewPlayer();
 
+
+
+
+
+// IGNORE THE BELOW!!!//
 //I would like to add a button for each cell to increase or decrease the score; maybe I shoule make an object?!
 
 //so, we wanted to show that if you us .getelementbyclassname but there are no things by that class name, you'll get an empty array. We learned that return will give back the thing you ask for right after 'return', and we learned about the function inside the concole log - instead of console log just the name of the function, it gives me the function, but if i console log invoke the function, it will show me the result of the function in that console.log
