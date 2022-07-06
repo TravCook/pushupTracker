@@ -18,15 +18,17 @@ let addNewPlayer = () => {
     let player = row.insertCell(0);    
   
     let playerName = " new player "
-     player.innerHTML = "<button id='playerButton'" + "</button>" + playerName +  "<input id='input1' type='text' value='name'>" + "</input>";
+     player.innerHTML = "<input id='input1' type='text' value='name'>" + "</input>" + playerName;
       console.log(table.children);
       console.log(table.children[0].children[0].children[0].textContent);
+      console.log(table.children.length);
+
       
     let nameEntry = document.getElementById('input1').value;
-    let playerEntry = document.getElementById('playerButton').textContent;
     console.log(nameEntry);
-    console.log(playerEntry);
 
+
+    
     let score = row.insertCell(1);
       score.innerHTML = 0 + " placeholder! ";
 
@@ -41,7 +43,17 @@ let addNewPlayer = () => {
 };
 addNewPlayer();
 
+   //let's make a for loop based on the children.length!
 
+    // let createPlayer = () =>{
+    //   document.getElementById("addPlayer").onclick = function () {
+    //   let table = document.getElementById("playerTable");
+    //   for (let i=0; i < table.children.length; i++){
+    //     table.insertRow(i);
+    //     row.insertCell(i);     
+    //   }
+    // };
+    // createPlayer();
 
 
 
