@@ -13,27 +13,36 @@ let addNewPlayer = () => {
     let table = document.getElementById("playerTable");
 
     //this is going to always insert at 0; if you want it to be the last it has to be -1
-    let row = table.insertRow(0);
+    let row = table.insertRow(-1);
+    let player = row.insertCell(-1);
 
-    let player = row.insertCell(0);    
-  
-    let playerName = " new player "
-     player.innerHTML = "<input id='input1' type='text' value='name'>" + "</input>" + playerName;
-      console.log(table.children);
-      console.log(table.children[0].children[0].children[0].textContent);
-      console.log(table.children.length);
+    player.innerHTML =
+      "<input id='input1' type='text' value='name'>" + "</input>";
+    console.log(table.children);
+    console.log(table.children.length);
+    console.log(table.children[0].children.length);
+    let nameEntry = document.getElementById("input1").value;
+    let nameEnter = document.getElementById("input1");
+    // nameEnter.addEventListener("keypress", function (event){
+    //   if (event.key === "enter") {
+    //     console.log("muffin!");
+    //   }
+    // });
 
-      
-    let nameEntry = document.getElementById('input1').value;
+    // function playerName() {
+    //   var text = nameEntry;
+    //   document.getElementById("input1").value = text;
+    // }
+
+
+
     console.log(nameEntry);
 
-
-    
     let score = row.insertCell(1);
-      score.innerHTML = 0 + " placeholder! ";
+    score.innerHTML = 0 + " placeholder! ";
 
     let addPushUps = row.insertCell(2);
-      addPushUps.innerHTML = addPushUpsButton;
+    addPushUps.innerHTML = addPushUpsButton;
 
     //the player's name will have to be an entry by the user
 
@@ -43,24 +52,20 @@ let addNewPlayer = () => {
 };
 addNewPlayer();
 
-   //let's make a for loop based on the children.length!
+//let's make a for loop based on the children.length!
 
-    // let createPlayer = () =>{
-    //   document.getElementById("addPlayer").onclick = function () {
-    //   let table = document.getElementById("playerTable");
-    //   for (let i=0; i < table.children.length; i++){
-    //     table.insertRow(i);
-    //     row.insertCell(i);     
-    //   }
-    // };
-    // createPlayer();
-
-
-
-
+// let createPlayer = () =>{
+//   document.getElementById("addPlayer").onclick = function () {
+//   let table = document.getElementById("playerTable");
+//   for (let i=0; i < table.children.length; i++){
+//     table.insertRow(i);
+//     row.insertCell(i);
+//   }
+// };
+// createPlayer();
 
 // ---------------------------- IGNORE THE BELOW!!! ------------------------------------
-//I would like to add a button for each cell to increase or decrease the score; maybe I shoule make an object?!
+
 
 //so, we wanted to show that if you us .getelementbyclassname but there are no things by that class name, you'll get an empty array. We learned that return will give back the thing you ask for right after 'return', and we learned about the function inside the concole log - instead of console log just the name of the function, it gives me the function, but if i console log invoke the function, it will show me the result of the function in that console.log
 // var fakeNews = () => {
