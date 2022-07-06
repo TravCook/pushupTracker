@@ -16,10 +16,12 @@ let addNewPlayer = () => {
     let row = table.insertRow(-1);
     let player = row.insertCell(-1);
 
+    //inserts player input field into new row cell
     player.innerHTML = "<input id='input1' type='text' value='name'> </input>";
     console.log(table.children);
     console.log(table.children[0].children.length);
-      
+     
+    //adds the name of the player from input value
     let nameEnter = document.getElementById("input1");
     console.log(nameEnter);
     nameEnter.addEventListener("keypress", function (event){
@@ -29,29 +31,22 @@ let addNewPlayer = () => {
         console.log("muffin!");
       player.innerHTML = "<h1>" + nameEntry + "</h1>";
 
-// the thing is, it's not finding the nameEntry yet.
       console.log(nameEntry);
       console.log(player.innerHTML.innerHTML);
       console.log(player.innerHTML);
       }
     });
 
-    // function playerName() {
-    //   var text = nameEntry;
-    //   document.getElementById("input1").value = text;
-    // }
-
-
-
+    //inserts score field into new row cell
     let score = row.insertCell(1);
     score.innerHTML = 0 + " placeholder! ";
-
+    //inserts add pushups button into new row cell
     let addPushUps = row.insertCell(2);
     addPushUps.innerHTML = addPushUpsButton;
 
     //the player's name will have to be an entry by the user
 
-    // addPushUps.addClass();
+    // addPushUps.addClass(); <--- just a note for myself for later
     //wouldnt it be nice to have onclick the user can add whatever number they want instead of +1?
   };
 };
