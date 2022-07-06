@@ -42,14 +42,14 @@ let addNewPlayer = () => {
     let addPushUps = row.insertCell(2);
     let addPushUpsButton = "<button id='pushupsbutton'>Add Push Ups</button>";
     addPushUps.innerHTML = addPushUpsButton;
+    //add one via button
     let pushUpsButt = document.getElementById("pushupsbutton")
     pushUpsButt.onclick = function(){
       console.log("yo!")
       score.innerHTML++
     }
 
-    //the player's name will have to be an entry by the user
-
+   
     // addPushUps.addClass(); <--- just a note for myself for later
     //wouldnt it be nice to have onclick the user can add whatever number they want instead of +1?
   };
