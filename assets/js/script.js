@@ -31,18 +31,22 @@ let addNewPlayer = () => {
       player.innerHTML = "<h1>" + nameEntry + "</h1>";
 
       console.log(nameEntry);
-      console.log(player.innerHTML.innerHTML);
-      console.log(player.innerHTML);
+   
       }
     });
 
     //inserts score field into new row cell
     let score = row.insertCell(1);
-    score.innerHTML = 0 + " placeholder! ";
+    score.innerHTML = 0;
     //inserts add pushups button into new row cell
     let addPushUps = row.insertCell(2);
-    let addPushUpsButton = "<button>Add Push Ups</button>";
+    let addPushUpsButton = "<button id='pushupsbutton'>Add Push Ups</button>";
     addPushUps.innerHTML = addPushUpsButton;
+    let pushUpsButt = document.getElementById("pushupsbutton")
+    pushUpsButt.onclick = function(){
+      console.log("yo!")
+      score.innerHTML++
+    }
 
     //the player's name will have to be an entry by the user
 
