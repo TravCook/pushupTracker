@@ -19,18 +19,19 @@ let addNewPlayer = () => {
     player.innerHTML = "<input id='input1' type='text' value='name'> </input>";
     console.log(table.children);
     console.log(table.children[0].children.length);
-    let nameEntry = document.getElementById("input1").value;
-    console.log(nameEntry);
-   
+      
     let nameEnter = document.getElementById("input1");
     console.log(nameEnter);
     nameEnter.addEventListener("keypress", function (event){
       if (event.key === "Enter") {
+        let nameEntry = document.getElementById("input1").value;
+        console.log(nameEntry);
         console.log("muffin!");
-      player.innerHTML = "<h1 value='newname'>newname</h1>";
+      player.innerHTML = "<h1>" + nameEntry + "</h1>";
+
+// the thing is, it's not finding the nameEntry yet.
       console.log(nameEntry);
       console.log(player.innerHTML.innerHTML);
-      player.innerHTML.value = nameEntry;
       console.log(player.innerHTML);
       }
     });
