@@ -17,17 +17,19 @@ let addNewPlayer = () => {
     let player = row.insertCell(-1);
 
     player.innerHTML =
-      "<input id='input1' type='text' value='name'>" + "</input>";
+      "<input id='input1' type='text' value='name'> </input>";
     console.log(table.children);
-    console.log(table.children.length);
     console.log(table.children[0].children.length);
     let nameEntry = document.getElementById("input1").value;
+    console.log(nameEntry);
+   
     let nameEnter = document.getElementById("input1");
-    // nameEnter.addEventListener("keypress", function (event){
-    //   if (event.key === "enter") {
-    //     console.log("muffin!");
-    //   }
-    // });
+    console.log(nameEnter);
+    nameEnter.addEventListener("keypress", function (event){
+      if (event.key === "Enter") {
+        console.log("muffin!");
+      }
+    });
 
     // function playerName() {
     //   var text = nameEntry;
@@ -35,8 +37,6 @@ let addNewPlayer = () => {
     // }
 
 
-
-    console.log(nameEntry);
 
     let score = row.insertCell(1);
     score.innerHTML = 0 + " placeholder! ";
