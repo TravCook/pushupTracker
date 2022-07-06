@@ -1,5 +1,4 @@
-let maryCount = 60;
-let addPushUpsButton = "<button>Add Push Ups</button>";
+
 
 // let rows = document.getElementsByClassName("row");
 
@@ -42,6 +41,7 @@ let addNewPlayer = () => {
     score.innerHTML = 0 + " placeholder! ";
     //inserts add pushups button into new row cell
     let addPushUps = row.insertCell(2);
+    let addPushUpsButton = "<button>Add Push Ups</button>";
     addPushUps.innerHTML = addPushUpsButton;
 
     //the player's name will have to be an entry by the user
