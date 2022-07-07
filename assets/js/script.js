@@ -6,7 +6,8 @@
 //Instead of hard-coding rows and scores, I want to create objects that store name and score in local storage.
 
 //a function to create a new column and row for each new player.
-let addNewPlayer = () => {
+let addNewPlayer = () => 
+{
   document.getElementById("addPlayer").onclick = function () {
     //we made a variable called table to grab the table from the html, and some variables that insert rows and cells into that table
     let table = document.getElementById("playerTable");
@@ -36,10 +37,10 @@ let addNewPlayer = () => {
     });
 
     //inserts score field into new row cell
-    let score = row.insertCell(1);
+    let score = row.insertCell(-1);
     score.innerHTML = 0;
     //inserts add pushups button into new row cell
-    let addPushUps = row.insertCell(2);
+    let addPushUps = row.insertCell(-1);
     let addPushUpsButton = "<button id='pushupsbutton'>Add Push Ups</button>";
     addPushUps.innerHTML = addPushUpsButton;
     //add one via button
@@ -49,23 +50,28 @@ let addNewPlayer = () => {
       score.innerHTML++
     }
 
-   
     // addPushUps.addClass(); <--- just a note for myself for later
     //wouldnt it be nice to have onclick the user can add whatever number they want instead of +1?
   };
 };
 addNewPlayer();
 
+
+
+
+
+
 //let's make a for loop based on the children.length!
 
 // let createPlayer = () =>{
 //   document.getElementById("addPlayer").onclick = function () {
 //   let table = document.getElementById("playerTable");
-//   for (let i=0; i < table.children.length; i++){
+//   console.log(table);
+//   for (let i=0; i < table.children[0].children.length; i++){
 //     table.insertRow(i);
 //     row.insertCell(i);
 //   }
-// };
+// }};
 // createPlayer();
 
 // ---------------------------- IGNORE THE BELOW!!! ------------------------------------
